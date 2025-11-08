@@ -2,7 +2,8 @@ FROM osrf/ros:jazzy-desktop-full
 
 # Set up dev packages
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update \
+RUN sed -i 's|http://archive.ubuntu.com/ubuntu/|https://archive.ubuntu.com/ubuntu/|g' /etc/apt/sources.list \
+   && apt-get update \
    && apt-get -y install --no-install-recommends \
     bash-completion \
     gdb \
