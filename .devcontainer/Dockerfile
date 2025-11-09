@@ -19,11 +19,20 @@ RUN sed -i 's|http://archive.ubuntu.com/ubuntu/|https://archive.ubuntu.com/ubunt
     libx11-xcb1 libxcb1 libxcb-render0 libxcb-shm0 libxcb-xfixes0 libxcb-shape0 \
     libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-util1 \
     libxcb-xinerama0 libxcb-xkb1 libxkbcommon0 libxkbcommon-x11-0 \
-    libglu1-mesa libxi6 libsm6 libxrender1 libfontconfig1 \
-   # Clean up
+    libglu1-mesa libxi6 libsm6 libxrender1 libfontconfig1
+
+# Install Gazebo
+RUN apt-get update \
+    && apt-get install curl lsb-release gnupg \
+    && curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] https://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null \
+    && apt-get update \
+    && apt-get -y install gz-harmonic \
+    # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
+
 ENV DEBIAN_FRONTEND=dialog
 
 ### For Windows, uncomment the following lines to install WSLg dependencies and utilize vGPU acceleration 
