@@ -8,6 +8,7 @@ Tutoriels suivies :
 - [Beginner: CLI tools - ROS2 Docs](https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools.html)
 - [Beginner: Client libraries - ROS2 Docs](https://docs.ros.org/en/jazzy/Tutorials/Beginner-Client-Libraries.html)
 - [URDF - ROS2 Docs](https://docs.ros.org/en/jazzy/Tutorials/Intermediate/URDF/URDF-Main.html)
+- [Gazebo Tutorials - Gazebo Docs](https://gazebosim.org/docs/latest/tutorials/)
 
 Connaissances apprises :
 - Nodes, topics, services, à la fois théorique et mise en pratique.
@@ -26,3 +27,5 @@ Choses à approfondir :
 - [ ] Qu'est ce que QoS ? (Quality of Service ?)
 - [ ] Le lintage propre, et les testes (les actions github du template)
 - [ ] Apprendre `tf2`
+- [ ] Export de OnShape à URDF ([outil](https://onshape-to-robot.readthedocs.io/en/latest/))
+- [ ] La commande `source`
