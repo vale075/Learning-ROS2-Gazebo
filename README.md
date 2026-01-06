@@ -10,6 +10,9 @@ Gazebo utilise le format `SDF` pour décrire un robot, format qui lui est spéci
 - [URDF - ROS2 Docs](https://docs.ros.org/en/jazzy/Tutorials/Intermediate/URDF/URDF-Main.html)
 - [Gazebo Tutorials - Gazebo Docs](https://gazebosim.org/docs/latest/tutorials/)
 
+## Liens intéressants
+- [Tutoriel ROS2 d'une université](https://sir.upc.edu/projects/ros2tutorials/index.html)
+
 ## Connaissances apprises :
 - Nodes, topics, services, à la fois théorique et mise en pratique.
 - Action (théorique, non mis en application)
